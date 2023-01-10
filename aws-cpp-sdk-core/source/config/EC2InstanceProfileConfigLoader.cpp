@@ -93,7 +93,7 @@ namespace Aws
             auto region = m_ec2metadataClient->GetCurrentRegion();
 
             Profile profile;
-            profile.SetCredentials(AWSCredentials(accessKey, secretKey, token));
+            profile.SetCredentials(AWSCredentials(accessKey, secretKey, token, expirationTime));
             profile.SetRegion(region);
             profile.SetName(INSTANCE_PROFILE_KEY);
 
